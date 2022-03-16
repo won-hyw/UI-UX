@@ -1,0 +1,29 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>재생 목록</title>
+	<script>
+		window.onload = addSongs;
+		function addSongs() {
+			var song1 = document.getElementById("song1");
+			//song1은 이미존재한 id 값
+			var song2 = document.getElementById("song2");
+			var song3 = document.getElementById("song3");
+
+			song1.innerHTML = "Rock with you - 세븐틴";
+			song2.innerHTML = "I got love - 몬스타엑스";
+			song3.innerHTML = "오르골 (Life Is Still Going On) - NCT Dream";
+		}
+	</script>
+	</head>
+<body>
+
+	<h1>나의 멋진 재생 목록</h1>
+	<ul id="playlist">
+	<li id="song1"></li>
+	<li id="song2"></li>
+	<li id="song3"></li>
+	</ul>
+
+</body>
+</html>

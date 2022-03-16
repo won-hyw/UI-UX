@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html><meta charset="utf-8">
+<body>
+  <h1>The Storage clear() Method</h1>
+
+  <h3>Missing localStorage items?</h3>
+  <button type="button" onclick="createItems()">Create local storage items</button>
+
+  <h3>Display Items</h3>
+  <button type="button" onclick="displayItems()">Display items</button>
+
+  <h3>Remove Items</h3>
+  <button type="button" onclick="deleteItems()">deleteItems</button>
+
+  <hr>
+  <div id="demo"></div>
+
+<script>
+  // local Storage에 값을 저장하는 함수
+  function createItems() {
+    localStorage.setItem("mytime", Date.now());
+    localStorage.setItem("myname", "Yoon");
+    localStorage.setItem("myage", 20);
+  }
+  
+  // local Storage에 있는 값을 브라우저에 보이도록 하는 함수
+  function displayItems() {
+    var l, i;
+
+    document.getElementById("demo").innerHTML = "";
+    for (i = 0; i < localStorage.length; i++) {
+    x = localStorage.key(i);
+    document.getElementById("demo").innerHTML += x + "<br>";
+    }
+  }
+  
+  // local Storage에 있는 값을 삭제하는 함수
+  function deleteItems() {
+    localStorage.clear();
+  }
+  </script>
+  
+
+</body>
+</html>
