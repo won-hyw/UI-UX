@@ -6,7 +6,7 @@
 function save(item) {
 	var playlistArray = getStoreArray("playlist");
 	playlistArray.push(item);
-	localStorage.setItem("playlist", JSON.stringify(playlistArray));
+	localStorage.setItem("playlist", JSON.stringify(playlistArray)); // 저장할 때는 문자열로
 }
 
 function loadPlaylist() {
@@ -31,7 +31,7 @@ function getStoreArray(key) {
 		playlistArray = new Array();
 	}
 	else {
-		playlistArray = JSON.parse(playlistArray);
+		playlistArray = JSON.parse(playlistArray); // 가져올 때는 객체로
 	}
 	return playlistArray;
 }
