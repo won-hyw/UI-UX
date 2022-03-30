@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>test5.html</title>
+</head>
+
+<script>
+    // 객체 속성에 함수 할당
+    var Person = {};
+    
+    Person["age"] = 28;
+    Person["name"] = "조슈아";
+    // Person['add'] = function (a, b) {
+    Person.add = function (a, b) {
+        return a + b;
+    };
+
+    console.log("더하기 : %d", Person.add(10, 10));
+</script>
+
+</html>

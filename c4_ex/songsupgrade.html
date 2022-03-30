@@ -1,0 +1,53 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <title>곡 제시 프로그램</title>
+    <script>
+        var num = prompt("좋아하는 노래의 단어를 입력하세요", "");
+        
+        if (num == "") {
+            alert("노래를 입력하세요");
+            var num = prompt("좋아하는 노래의 단어를 입력하세요", "Fallin' Flower");
+        }
+
+        var songs = [
+            "Rock with you",
+            "Ready to love",
+            "Fallin' Flower",
+            "Make U Dance",
+            "Sorry Not Sorry"
+        ];
+
+        function suggestSong() {
+            var index = Math.floor(Math.random() * songs.length);
+            document.write("총 " + songs.length + "곡이 준비되어 있습니다. <br>");
+            document.write((index+1) + "번째 곡 ");
+            var suggestion = songs[index]; 
+            return suggestion;
+        }
+
+        var song = suggestSong();
+
+        document.write("오늘의 추천 곡은 " + song + "입니다. <br>");
+
+        function searchForSong(word) {
+            var song;
+            for (var i = 0; i < songs.length; i++) {
+                song = songs[i];
+                if (songs[i].indexOf(word) >= 0) {
+                    return "검색하신 단어가 포함된 곡은 " + song + "곡이 있습니다.";
+                }
+            }
+            return "없는 곡입니다.";
+        }
+
+        var matchedSong = searchForSong(num);
+        document.write(matchedSong);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
